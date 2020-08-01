@@ -19,14 +19,24 @@ message = "Hello and Welcome".encode()
 client_socket.send(message)
 
 while True:
-    command = input("\nDigite o comando que deseja executar:\n>")
-    client_socket.send(command.encode())
-    if command.lower() == "exit":
-        break
-    # Recebe o resultado do comando
-    print("Aguardando resposta...")
-    response = client_socket.recv(BUFFER_SIZE).decode()
-    print(response)
+    try:
+        command = input("\nDigite o comando que deseja executar:\n>")
+        client_socket.send(command.encode())
+        if command.lower() == "exit":
+            break
+        # Recebe o resultado do comando
+        print("Aguardando resposta...")
+        response = client_socket.recv(BUFFER_SIZE).decode()
+        print(response)
+    except KeyboardInterrupt:
+        print("Servidor finalizado")
+        client_socket.close()
+        s.close()
+    except Exception as e:
+        print("Deu ruim...")
+        print(e)
+        client_socket.close()
+        s.close()
 
 # Fecha a conexão com o client
 client_socket.close()
