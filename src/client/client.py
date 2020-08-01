@@ -1,10 +1,12 @@
 import os
 import socket
 import subprocess
+from dotenv import load_dotenv
 
 
+load_dotenv()
 SERVER_HOST = os.getenv('NGROK_URL')
-SERVER_PORT = os.getenv('NGROK_PORT')
+SERVER_PORT = int(os.getenv('NGROK_PORT'))
 BUFFER_SIZE = 1024
 
 s = socket.socket()
