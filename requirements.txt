@@ -2,3 +2,4 @@ python-dotenv
 keyboard
 requests
 flask
+pyinstaller
