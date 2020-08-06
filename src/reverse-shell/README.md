@@ -7,4 +7,9 @@ Um simples shell reverso feito em python, fiz seguindo as dicas [deste tutorial]
 
 ## Parâmetros
 
-É necessário criar um arquivo `.env`
+É necessário criar um arquivo `.env` nessa mesma pasta, contendo os seguintes parâmetros:
+
+|Parâmetro|Descrição|
+|--|--|
+|`NGROK_URL`|Endereço de host do server|
+|`NGROK_PORT`|Porta|
