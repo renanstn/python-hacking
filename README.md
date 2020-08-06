@@ -4,7 +4,7 @@ Repositório com vários mini projetos de estudo em hacking que eu desenvolvo al
 
 Cada mini projeto tem o seu próprio README com mais detalhes.
 
-## Projetos
+## Desenvolvidos até o momento
 
-- Reverse shell
+- [Reverse shell](https://github.com/renanstd/python-hacking/tree/master/src/reverse-shell)
 - [Keylogger](https://github.com/renanstd/python-hacking/tree/master/src/keylogger)
