@@ -4,3 +4,7 @@ Um simples shell reverso feito em python, fiz seguindo as dicas [deste tutorial]
 
 - `client.py` é enviado para a vítima
 - `server.py` recebe a conexão reversa
+
+## Parâmetros
+
+É necessário criar um arquivo `.env`
