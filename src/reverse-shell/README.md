@@ -11,5 +11,5 @@ Um simples shell reverso feito em python, fiz seguindo as dicas [deste tutorial]
 
 |Parâmetro|Descrição|
 |--|--|
-|`NGROK_URL`|Endereço de host do server|
-|`NGROK_PORT`|Porta|
+|`URL`|Endereço de host do server|
+|`PORT`|Porta|

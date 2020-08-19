@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-SERVER_HOST = os.getenv('NGROK_URL')
-SERVER_PORT = int(os.getenv('NGROK_PORT'))
+SERVER_HOST = os.getenv('URL')
+SERVER_PORT = int(os.getenv('PORT'))
 BUFFER_SIZE = 1024
 
 s = socket.socket()
