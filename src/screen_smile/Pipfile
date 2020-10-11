@@ -9,6 +9,7 @@ verify_ssl = true
 pyautogui = "*"
 requests = "*"
 flask = "*"
+python-xlib = "*"
 
 [requires]
 python_version = "3.8"

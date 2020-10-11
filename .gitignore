@@ -130,3 +130,6 @@ dmypy.json
 
 # VScode
 .vscode
+
+# Received img files
+src/screen_smile/received/
