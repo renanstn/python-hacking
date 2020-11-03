@@ -133,3 +133,6 @@ dmypy.json
 
 # Received img files
 src/screen_smile/received/
+
+# Builds
+output/

@@ -10,6 +10,7 @@ pyautogui = "*"
 requests = "*"
 flask = "*"
 python-xlib = "*"
+auto-py-to-exe = "*"
 
 [requires]
 python_version = "3.8"
