@@ -1,9 +1,12 @@
 import os
-import datetime
+import time
 from flask import Flask, request, jsonify
 
 
-UPLOAD_FOLDER = './received'
+UPLOAD_FOLDER = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)),
+    'received'
+)
 ALLOWED_EXTENSIONS = ['png']
 
 
@@ -27,7 +30,7 @@ def log():
         return jsonify({'msg': 'no file received'})
     file = request.files['img']
     if file and allowed_file(file.filename):
-        filename = str(datetime.datetime.now()) + '.png'
+        filename = time.strftime("%Y%m%d-%H%M%S") + '.png'
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         return jsonify({'msg': 'file received'})
 
